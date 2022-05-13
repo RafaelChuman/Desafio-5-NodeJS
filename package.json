@@ -1,5 +1,5 @@
 {
-  "name": "PJI240",
+  "name": "pji240",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "lint:fix": "eslint --fix . --ext ts,tsx",
     "test": "jest",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "migrate": "ts-node-dev ./node_modules/typeorm/cli migration:run -d ./src/database/migration/"
+    "migrate": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d typeORM_DataSourcePG.ts"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -35,7 +35,7 @@
     "prettier": "^2.2.1",
     "supertest": "^6.1.3",
     "ts-jest": "^26.5.3",
-    "ts-node-dev": "^1.1.8",
+    "ts-node-dev": "^2.0.0-0",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.2.2"
   }
